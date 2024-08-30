@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Amazon</title>
+		<link rel="stylesheet" href="./style/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	</head>
+	<body>
+
+		<div class="container">
+
+				<header>
+
+
+									<nav class="nav">
+
+															<div class="logo">
+																	<img src="./images/amazon-logo.svg" alt="basketball">
+																	<button type="button" name="button" onclick="handleSidebar()">&#9776</button>
+															</div>
+
+
+																<div class="search">
+																		<form class="" action="index.html" method="post">
+																				<input type="text" name="" value="">
+																				<button type="button" name="button">Search</button>
+																		</form>
+																	</div>
+
+
+																<div class="cart-n-signin">
+																		<a href="#">Currencies</a>
+																		<a href="#"><rb></rb>Return $ Orders</a>
+																		<a href="#">Sign In</a>
+																		<a href="#"><span class="material-symbols-outlined">add_shopping_cart</span>Cart</a>
+																				<a href="#" class="count">0</a>
+																</div>
+
+									</nav>
+					</header>
+						<aside class="sidebar">
+								<header>
+										<p>Hello user</p>
+										<p class="closeMenu" onclick="handleClosemenu()">X</p>
+								</header>
+								<section>
+									section 1
+								</section>
+								<hr/>
+								<section>
+									section 2
+								</section>
+
+
+								<section>
+									section 3
+								</section>
+								<hr/>
+
+								<section>
+									section 3
+								</section>
+									<hr/>
+						</aside>
+
+
+
+						<div class="main">
+									<div class="image-layout">
+												<div class="product-image">
+														<img src="./images/71gSTSenYHL._AC_UL320_.jpg" alt="basketball">
+														<p>Basket Ball</p>
+														<p>Rating</p>
+														<h2>$34.00</h2>
+														<button type="button" name="button">Add to cart</button>
+												</div>
+
+												<div class="product-image">
+																			<img src="./images/71q0NvJZecL._AC_UY218_.jpg" alt="basketball">
+																			<p>Blander For fresh fruite</p>
+																			<p>Rating 5.7</p>
+																			<h2>$3.00</h2>
+																			<button type="button" name="button">Add to cart</button>
+												</div>
+
+
+												<div class="product-image">
+														<img src="./images/81JJsbLXp4L._AC_UL320_.jpg" alt="basketball">
+														<p>Original Pop corn</p>
+														<p>Rating 4.4</p>
+														<h2>$10.00</h2>
+														<button type="button" name="button">Add to cart</button>
+												</div>
+
+
+												<div class="product-image">
+														<img src="./images/81n-9sDsr6L._AC_UY218_.jpg" alt="basketball">
+														<p>Basket Ball</p>
+														<p>Rating 3.0</p>
+														<h2>$33.00</h2>
+														<button type="button" name="button">Add to cart</button>
+												</div>
+
+												<div class="product-image">
+														<img src="./images/71gSTSenYHL._AC_UL320_.jpg" alt="basketball">
+														<p>Basket Ball</p>
+														<p>Rating 5.6</p>
+														<h2>$34.00</h2>
+														<button type="button" name="button">Add to cart</button>
+												</div>
+										</div>
+						</div>
+ 	</div>
+
+		<script type="text/javascript">
+
+			function handleSidebar(){
+					document.querySelector('button').addEventListener('click', ()=>{
+							document.querySelector('.sidebar').classList.add('open');
+					})
+			}
+
+			function handleClosemenu(){
+				document.querySelector('.closeMenu').addEventListener('click', ()=>{
+						document.querySelector('.sidebar').classList.remove('open');
+				})
+
+			}
+
+		</script>
+	</body>
+</html>

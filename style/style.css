@@ -1,0 +1,154 @@
+body {
+		box-sizing: border-box;
+		font-size: 1rem;
+}
+
+
+/* medial query for phone */
+@media screen and (min-width: 400px) {
+	.container {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}
+
+
+@media screen  and (min-width: 700px) {
+	.container {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: minmax(150px auto);
+				grid-auto-rows: minmax(5rem, auto);
+			}
+
+
+/* grid for header */
+	header {
+		grid-column: 1 / 4;
+		background-color: #000;
+		color: #fff;
+		padding: 0 1.5rem;
+
+	}
+
+/* grid for main content */
+	.main{
+		grid-column: 1 / 4;
+		grid-row: 2;
+		font-family: sans-serif;
+		font-size: .98rem;
+		font-weight: lighter;
+	}
+
+	.nav{
+		display: flex;
+		list-style:none;
+		justify-content: space-between;
+		align-items:center;
+		padding-top: 1.2rem;
+
+	}
+
+	.cart-n-signin a{
+		color: #fff;
+		margin: .5rem;
+		text-decoration: none;
+	}
+
+	.cart-n-signin a:hover{
+		 border-bottom: .3rem solid;
+	}
+ .cart-n-signin{
+		position: relative;
+
+	}
+	.count{
+		position: absolute;
+		bottom: 20px;
+		right: 30px;
+
+	}
+
+	.nav button{
+		cursor: pointer;
+	}
+
+	form{
+		width: 35rem;
+	}
+
+	input {
+		min-width: 25rem;
+	}
+
+	input, button{
+		padding: .5rem;
+		border-radius: .5rem;
+	}
+
+	form button{
+		background-color: #ffbf00;
+		cursor: pointer;
+	}
+
+/* sidebar */
+	.sidebar{
+	position: fixed;
+	transition: all .5s;
+	transform: translateX(-30rem);
+	width: 20rem;
+	border-color: #fff;
+	height: 100%;
+	background-color: #f0f0f0;
+	padding: .7rem;
+	cursor: pointer;
+}
+
+.sidebar.open{
+	 transform: translateX(0);
+}
+
+/* .sidebar.remove{
+		transform: translateX(-30rem);
+} */
+
+.closeMenu{
+	 border-radius: 100%;
+		opacity: .20px;
+		background-color: #8c8c8c;
+}
+
+.sidebar header{
+	display: flex;
+	justify-content: space-between;
+	padding: .5rem;
+	background-color: #4d4d4d;
+}
+
+.closeMenu{
+	 padding: .3rem;
+
+}
+
+
+/* products content */
+.image-layout{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap:.5rem;
+	margin-top: 1rem;
+}
+
+.product-image{
+		border: .1rem solid lightgray;
+		min-width: 20rem;
+		padding: .6rem;
+}
+
+.product-image button{
+	background-color: 	#ffff00;
+	border:none;
+	cursor: pointer;
+}
+}
