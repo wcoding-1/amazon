@@ -23,7 +23,7 @@ const products = [
 			image:'81JJsbLXp4L._AC_UL320_.jpg',
 			rating:4.7,
 			price:'10.00',
-				stock: 20,
+			stock: 20,
 		},
 
 		{
@@ -62,9 +62,35 @@ products.forEach(product =>{
 						<option value=''>3</option>
 						<option value=''>4</option>
 				</select>
-				<button type='button' name='button'>Add to cart</button>
+				<button type='button' name='button' data-product-item='${product.id}' id='cartButton'>Add to cart</button>
 		</div>
 		`
-})
+});
 
 document.querySelector('.image-layout').innerHTML = productsHTML;
+
+	 document.querySelectorAll('#cartButton').forEach((button) =>{
+
+			button.addEventListener('click', ()=>{
+
+				const productId = Number(button.dataset.productItem);
+				let matchItem;
+
+				cart.forEach((item) =>{
+					if(productId=== item.id){
+							matchItem = item;
+					}
+			});
+
+			if(matchItem){
+				matchItem.qty += 1;
+			}else{
+
+				cart.push({
+					id: productId,
+					qty:1,
+				});
+				 
+			}
+		});
+});
