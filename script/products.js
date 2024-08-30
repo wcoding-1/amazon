@@ -90,7 +90,12 @@ document.querySelector('.image-layout').innerHTML = productsHTML;
 					id: productId,
 					qty:1,
 				});
-				 
 			}
+			let count = 0;
+			cart.forEach(item=>{
+				count += item.qty;
+			})
+			document.querySelector('.cart-qty').textContent = count;
+
 		});
 });
