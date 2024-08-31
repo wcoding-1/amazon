@@ -40,12 +40,13 @@ body {
 		font-weight: lighter;
 	}
 
+
 	.nav{
 		display: flex;
 		list-style:none;
 		justify-content: space-between;
 		align-items:center;
-		padding-top: 1.2rem;
+		padding-top: 1.8rem;
 
 	}
 
@@ -62,13 +63,25 @@ body {
 		position: relative;
 
 	}
-	.count{
+	.count-item{
 		position: absolute;
-		bottom: 20px;
-		right: 30px;
+		bottom: 16px;
+		right: 33px;
 
 	}
 
+	.hint{
+		position: absolute;
+		bottom: 27px;
+		right: 28px;
+		padding: .3rem;
+		display: none;
+	}
+	.hint span{
+				color: #008000;
+				font-size: 18px;
+				font-weight: bolder;
+	}
 	.nav button{
 		cursor: pointer;
 	}
