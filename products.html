@@ -10,86 +10,92 @@
 
 		<div class="container">
 
+			<header>
+
+
+				<nav class="nav">
+
+					<div class="logo">
+						<img src="./images/amazon-logo.svg" alt="basketball">
+						<button type="button" name="button" onclick="handleSidebar()">&#9776</button>
+					</div>
+
+
+					<div class="search">
+						<form class="" action="index.html" method="post">
+								<input type="text" name="" value="">
+								<button type="button" name="button">Search</button>
+						</form>
+					</div>
+
+
+					<div class="cart-n-signin">
+						<a href="#">Currencies</a>
+						<a href="#"><rb></rb>Return $ Orders</a>
+						<a href="#">Sign In</a>
+						<a href="#"><span class="material-symbols-outlined">add_shopping_cart</span>Cart</a>
+						<a href="#" class="count-item cart-qty">0</a>
+								<a href="#" class="hint add-message"><span>Add</span></a>
+					</div>
+
+				</nav>
+			</header>
+			<aside class="sidebar">
 				<header>
+					<p>Hello user</p>
+					<p class="closeMenu" onclick="handleClosemenu()">X</p>
+				</header>
+				<section>
+					section 1
+				</section>
+				<hr/>
+				<section>
+					section 2
+				</section>
 
 
-									<nav class="nav">
+				<section>
+					section 3
+				</section>
+				<hr/>
 
-															<div class="logo">
-																	<img src="./images/amazon-logo.svg" alt="basketball">
-																	<button type="button" name="button" onclick="handleSidebar()">&#9776</button>
-															</div>
-
-
-																<div class="search">
-																		<form class="" action="index.html" method="post">
-																				<input type="text" name="" value="">
-																				<button type="button" name="button">Search</button>
-																		</form>
-																	</div>
-
-
-																<div class="cart-n-signin">
-																		<a href="#">Currencies</a>
-																		<a href="#"><rb></rb>Return $ Orders</a>
-																		<a href="#">Sign In</a>
-																		<a href="#"><span class="material-symbols-outlined">add_shopping_cart</span>Cart</a>
-																		<a href="#" class="count-item cart-qty">0</a>
-																		<a href="#" class="hint add-message"><span>Add</span></a>
-																</div>
-
-									</nav>
-					</header>
-						<aside class="sidebar">
-								<header>
-										<p>Hello user</p>
-										<p class="closeMenu" onclick="handleClosemenu()">X</p>
-								</header>
-								<section>
-									section 1
-								</section>
-								<hr/>
-								<section>
-									section 2
-								</section>
-
-
-								<section>
-									section 3
-								</section>
-								<hr/>
-
-								<section>
-									section 3
-								</section>
-									<hr/>
-						</aside>
+				<section>
+					section 3
+				</section>
+					<hr/>
+			</aside>
 
 
 
-						<div class="main">
-									<div class="image-layout">
+			<div class="main">
+				<div class="image-layout">
 
-									</div>
- 					</div>
+				</div>
+			</div>
 
-		<script type="text/javascript">
+						
 
+			<script type="module" src="script/amazon.js"></script>
+
+		
+			<script>
+
+						
 			function handleSidebar(){
-					document.querySelector('button').addEventListener('click', ()=>{
-							document.querySelector('.sidebar').classList.add('open');
-					})
+			
+				document.querySelector('button').addEventListener('click', ()=>{
+					document.querySelector('.sidebar').classList.add('open');
+				})
 			}
 
 			function handleClosemenu(){
 				document.querySelector('.closeMenu').addEventListener('click', ()=>{
-						document.querySelector('.sidebar').classList.remove('open');
-				})
+					document.querySelector('.sidebar').classList.remove('open');
+			})
 
 			}
-
-		</script>
-			<script type="text/javascript" src="./script/cart.js"></script>
-		<script type="text/javascript" src="./script/products.js"></script>
+			</script>
+		</div>	
+	
 	</body>
 </html>
