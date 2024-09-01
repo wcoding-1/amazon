@@ -1,5 +1,6 @@
  import { products } from "../data/products.js";
- import { cart } from "../data/cart.js";
+ import { cart, addToCart} from "../data/cart.js";
+
 
 let productsHTML = '';
 
@@ -25,39 +26,15 @@ products.forEach(product =>{
 
 		document.querySelector('.image-layout').innerHTML = productsHTML;
 
-		//Add to cart function
-		function addToCart(button){
+	
 
-			let selectValue = document.querySelector(`.select-option-${button.dataset.productItem}`).value
-			let updateQty = Number(selectValue);
-			const productId = Number(button.dataset.productItem);
-			let matchItem;
-
-			cart.forEach((item) =>{
-				if(productId=== item.id){
-						matchItem = item;
-				}
-		});
-
-		if(matchItem){
-			matchItem.qty += updateQty ;
-		}else{
-				cart.push({
-					id: productId,
-					qty:updateQty,
-				});
-		}
-
+	export function updateCart(){
+		let count = 0;
+		cart.forEach(cartItem =>{
+			count += cartItem.qty
+		})
+		document.querySelector('.cart-qty').textContent = count;
 	}
-
-//update cart quatity
-function updateCart(){
-	let count = 0;
-	cart.forEach(cartItem =>{
-		count += cartItem.qty
-	})
-	document.querySelector('.cart-qty').textContent = count;
-}
 
 	function addMessage(){
 			setTimeout(()=>{
@@ -73,7 +50,7 @@ function updateCart(){
 
 	}
 
-removeMessage()
+	removeMessage()
 
 	document.querySelectorAll('#cartButton').forEach((button) =>{
 
