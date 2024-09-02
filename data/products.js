@@ -14,7 +14,7 @@ export const products = [
         image:'71q0NvJZecL._AC_UY218_.jpg',
         rating:5.7,
         price:'3.00',
-            stock: 15,
+        stock: 15,
     },
 
     {
@@ -36,13 +36,40 @@ export const products = [
     },
 
     {
-        id:1,
-        name:'Basket Ball',
-        image:'71gSTSenYHL._AC_UL320_.jpg',
+        id:5,
+        name:'Hard process laptop',
+        image:'Fuji_BTF_Quad_Cards_1x_laptop._SY116_CB558654384_.jpg',
         rating:4.4,
         price:'34.00',
         stock: 10,
-    }
+    },
+    {
+        id:6,
+        name:'Best laptop',
+        image:'cc_359_laptop_us_v1._SY304_CB576754001_.jpg',
+        rating:4.4,
+        price:'300.00',
+        stock: 10,
+    },
+
+    {
+        id:7,
+        name:'Destop',
+        image:'Fuji_Desktop_Single_image_EBF_1x_v1._SY304_CB573698005_.jpg',
+        rating:4.4,
+        price:'200.00',
+        stock: 10,
+    },
+
+    {
+        id:8,
+        name:'Original Watch',
+        image:'MenWatches_1x._SY116_CB564394432_.jpg',
+        rating:4.4,
+        price:'100.00',
+        stock: 10,
+    },
+
 
 
 ]

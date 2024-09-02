@@ -1,0 +1,92 @@
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+nav{
+    display: flex;
+}
+nav img{
+    background-color: #000;
+    padding: .4rem;
+   
+}
+
+/* the main container for checkout page */
+.checkout-grid-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* the section that flex that checkout-product and  .checkout-optio */
+.checkout-card-layout{
+    display: flex;
+    flex-basis: 40rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: .1rem solid lightgray;
+    height: 15rem;
+    margin-bottom: .6rem;
+    padding: 0 .5rem;
+    column-gap: .7rem   ;
+}
+/* the section hold the image and it detail */
+.checkout-products{
+    display: flex;
+    column-gap: 1.5rem;
+    height: 15rem;
+    column-gap: .5rem   ;
+}
+.checkout-products img{
+    width: 10rem;
+}
+.checkout-products a{
+    text-decoration: none;
+    margin-right: .3rem;
+}
+
+
+ 
+.checkout-products .delete:hover{
+    color: red;
+}
+
+
+.product-detail{
+    align-self: center;
+}
+
+/* the part hold radio input */
+.checkout-option{
+    height: 15rem;
+    line-height: 10px;
+    padding: .5rem;
+}
+
+/* the div that hold the transaton detail */
+.checkout-transation-detail{
+    border: .1rem solid lightgray;
+    flex-basis: 20rem;
+    height: 15rem;
+    line-height: 10px;
+    padding: 0 .5rem;
+}
+.checkout-transation-detail ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  
+}
+
+.place-order{
+   background-color:#ffaf1a;
+   padding: .2rem 4rem;
+   border-radius: .5rem;
+   border:none; 
+   cursor: pointer;  
+}
+.button-layout{
+    text-align: center;
+}
