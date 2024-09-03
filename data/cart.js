@@ -37,25 +37,25 @@ export function addToCart(button){
 
 }
 
-export function removeFromCart(el) {
-    el.forEach(elD=>{
+export function removeFromCart(el, htmlE) {
 
         let cartUpdate = [];
 
-        elD.addEventListener('click',()=>{
-            let productId = elD.dataset.cartDelete;
+        el.addEventListener('click',()=>{
+            let productId = el.dataset.cartDelete;
 
             cart.forEach(item =>{
                 if(item.id != productId){
                     cartUpdate.push(item)   
                 }
+                htmlE.remove()
             });
             
             cart = cartUpdate;
            
         });
        
-    });
+
    
 }
 

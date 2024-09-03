@@ -11,7 +11,8 @@ cart.forEach(cartItem =>{
         }
     });
     
-    checkoutHTML += ` <div class="checkout-card-layout">
+    checkoutHTML += ` <div class="checkout-card-layout 
+    js-cart-container-${productObj.id}">
 
                     <div class="checkout-products">
                         <div>
@@ -59,7 +60,12 @@ cart.forEach(cartItem =>{
 document.querySelector('.js-getCheckout').innerHTML = checkoutHTML;
 
 
-removeFromCart(document.querySelectorAll('#delete-button'));
+document.querySelectorAll('#delete-button').forEach(link =>{
+    let removefromHTML = document.querySelector(`.js-cart-container-${link.dataset.cartDelete}`)
+    removeFromCart(link, removefromHTML);
+})
+
+
 
 
 
