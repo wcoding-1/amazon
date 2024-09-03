@@ -1,5 +1,5 @@
 
-export const cart = [
+export let cart = [
     {
         id:1,
         qty:1
@@ -19,8 +19,8 @@ export function addToCart(button){
         let matchItem;
 
         cart.forEach((item) =>{
-            if(productId=== item.id){
-                    matchItem = item;
+            if(productId === item.id){
+                matchItem = item;
             }
     });
 
@@ -32,6 +32,30 @@ export function addToCart(button){
                 qty:updateQty,
             });
     }
+    console.log(matchItem)
+    console.log(cart)
 
+}
+
+export function removeFromCart(el) {
+    el.forEach(elD=>{
+
+        let cartUpdate = [];
+
+        elD.addEventListener('click',()=>{
+            let productId = elD.dataset.cartDelete;
+
+            cart.forEach(item =>{
+                if(item.id != productId){
+                    cartUpdate.push(item)   
+                }
+            });
+            
+            cart = cartUpdate;
+           
+        });
+       
+    });
+   
 }
 

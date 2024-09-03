@@ -1,4 +1,4 @@
-import {cart} from '../data/cart.js';
+import {cart,removeFromCart} from '../data/cart.js';
 import {products} from '../data/products.js';
 
 let checkoutHTML = '';
@@ -23,7 +23,7 @@ cart.forEach(cartItem =>{
                             <h3>${productObj.price}</h3>
                             <h3>${productObj.qty}</h3>
                             <a href='#' class="update">Update</a>
-                            <a href='#' class="delete">Delete</a>
+                            <a href='#' class="delete" data-cart-delete='${productObj.id}' id='delete-button'>Delete</a>
                         </div>
                     
                     </div>
@@ -38,7 +38,7 @@ cart.forEach(cartItem =>{
                             </div>
 
                             <div>
-                                <input type="radio" name="option-1" class="js-option-${productObj.id}">
+                                <input type="radio" name="option-1" class="delete-button js-option-${productObj.id}">
                                 <label>Wednsday, june 14</label>
                                 <p>$4.99- shipping</p>
                             </div>
@@ -57,5 +57,11 @@ cart.forEach(cartItem =>{
 });
 
 document.querySelector('.js-getCheckout').innerHTML = checkoutHTML;
+
+
+removeFromCart(document.querySelectorAll('#delete-button'));
+
+
+
 
 
