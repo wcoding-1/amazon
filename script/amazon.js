@@ -1,5 +1,6 @@
  import { products } from "../data/products.js";
- import { cart, addToCart} from "../data/cart.js";
+ import { cart, addToCart, updateCart} from "../data/cart.js";
+ import { formatCurrency } from "../utils/util.js";
 
 
 let productsHTML = '';
@@ -10,7 +11,7 @@ products.forEach(product =>{
 				<img src='./images/${product.image}'>
 				<p>${product.name}</p>
 				<p>${product.rating}</p>
-				<h2>$${product.price}</h2>
+				<h2>$${formatCurrency(product.price)}</h2>
 
 				<select style='padding:.4rem .9rem'; class='select-option-${product.id}'>
 						<option value='1'>1</option>
@@ -24,28 +25,20 @@ products.forEach(product =>{
 		`
 });
 
-		document.querySelector('.image-layout').innerHTML = productsHTML;
+	document.querySelector('.image-layout').innerHTML = productsHTML;
 
 	
 
-	export function updateCart(){
-		let count = 0;
-		cart.forEach(cartItem =>{
-			count += cartItem.qty
-		})
-		document.querySelector('.cart-qty').textContent = count;
-	}
-
 	function addMessage(){
-			setTimeout(()=>{
-					document.querySelector('.add-message').style.display= 'block';
+		setTimeout(()=>{
+			document.querySelector('.add-message').style.display= 'block';
 		},1000)
 
 	}
 
 	function removeMessage(){
-			setTimeout(()=>{
-					document.querySelector('.add-message').style.display= 'none';
+		setTimeout(()=>{
+			document.querySelector('.add-message').style.display= 'none';
 		},3000)
 
 	}

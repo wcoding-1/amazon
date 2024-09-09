@@ -165,7 +165,7 @@ body {
 	cursor: pointer;
 }
 
-
+}
 
 /* laptop screen size 1024 */
 
@@ -266,7 +266,7 @@ body {
 	position: fixed;
 	transition: all .5s;
 	transform: translateX(-30rem);
-	width: 25rem;
+	width: 13rem;
 	border-color: #fff;
 	height: 100%;
 	background-color: #f0f0f0;
@@ -277,10 +277,6 @@ body {
 .sidebar.open{
 	 transform: translateX(0);
 }
-
-/* .sidebar.remove{
-		transform: translateX(-30rem);
-} */
 
 .closeMenu{
 	 border-radius: 100%;
@@ -323,8 +319,9 @@ body {
 }
 
 .product-image img{
-	width: 200px;
-	height: 185px;
+	width: 10rem;
+	height: 8rem;
 }
+
 }
 

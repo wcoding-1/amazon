@@ -39,8 +39,14 @@ nav img{
     height: 15rem;
     column-gap: .5rem   ;
 }
+.deliver-date h3{
+    width: 180px;
+    color: #0dbf00;
+    font-size: .78rem;
+}
 .checkout-products img{
-    width: 10rem;
+  
+    height: 6rem;
 }
 .checkout-products a{
     text-decoration: none;
@@ -53,10 +59,18 @@ nav img{
     color: red;
 }
 
-
 .product-detail{
     align-self: center;
 }
+
+.product-detail h3:nth-child(2){
+    color: red;
+}
+/* updating the total count in cart */
+#checkout-select-option{
+    display: none;
+}
+
 
 /* the part hold radio input */
 .checkout-option{

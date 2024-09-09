@@ -4,7 +4,7 @@ export const products = [
         name:'Basket Ball',
         image: '71gSTSenYHL._AC_UL320_.jpg',
         rating:4.4,
-        price:'34.00',
+        price:34,
         stock: 10,
     },
 
@@ -13,7 +13,7 @@ export const products = [
         name:'Blander For fresh fruite',
         image:'71q0NvJZecL._AC_UY218_.jpg',
         rating:5.7,
-        price:'3.00',
+        price:3,
         stock: 15,
     },
 
@@ -22,7 +22,7 @@ export const products = [
         name:'Origin Pop cord',
         image:'81JJsbLXp4L._AC_UL320_.jpg',
         rating:4.7,
-        price:'10.00',
+        price:10,
         stock: 20,
     },
 
@@ -31,7 +31,7 @@ export const products = [
         name:'Multi purpose blender',
         image:'81n-9sDsr6L._AC_UY218_.jpg',
         rating:3.7,
-        price:'33.00',
+        price:33,
         stock: 12,
     },
 
@@ -40,7 +40,7 @@ export const products = [
         name:'Hard process laptop',
         image:'Fuji_BTF_Quad_Cards_1x_laptop._SY116_CB558654384_.jpg',
         rating:4.4,
-        price:'34.00',
+        price:34,
         stock: 10,
     },
     {
@@ -48,7 +48,7 @@ export const products = [
         name:'Best laptop',
         image:'cc_359_laptop_us_v1._SY304_CB576754001_.jpg',
         rating:4.4,
-        price:'300.00',
+        price:300,
         stock: 10,
     },
 
@@ -57,7 +57,7 @@ export const products = [
         name:'Destop',
         image:'Fuji_Desktop_Single_image_EBF_1x_v1._SY304_CB573698005_.jpg',
         rating:4.4,
-        price:'200.00',
+        price:200,
         stock: 10,
     },
 
@@ -66,7 +66,7 @@ export const products = [
         name:'Original Watch',
         image:'MenWatches_1x._SY116_CB564394432_.jpg',
         rating:4.4,
-        price:'100.00',
+        price:100,
         stock: 10,
     },
 
