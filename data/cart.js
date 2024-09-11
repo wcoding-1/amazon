@@ -6,12 +6,12 @@ if(!cart){
         {
             id:1,
             qty:1,
-            deliveryDateId: 1
+            deliveryOptionId: '1'
         },
         {
             id:2,
             qty:2,
-           deliveryDateId: 2
+            deliveryOptionId: '2'
         }
     ]
 }
@@ -33,7 +33,7 @@ export function addToCart(button){
             if(productId === item.id){
                 matchItem = item;
             }
-    });
+        });
 
     if(matchItem){
         matchItem.qty += updateQty ;
@@ -41,7 +41,7 @@ export function addToCart(button){
         cart.push({
             id: productId,
             qty:updateQty,
-            deliveryDateId: 1
+            deliveryOptionId: '1'
         });
      
     }
@@ -57,7 +57,7 @@ export function updateCart(){
     document.querySelector('.cart-qty').textContent = count;
 }
 
-export function removeFromCart(el, htmlE) {
+export function removeFromCart(el, htmlE,reloadPage) {
 
         let cartUpdate = [];
 
@@ -75,12 +75,13 @@ export function removeFromCart(el, htmlE) {
             
             cart = cartUpdate;
             saveToStorage();
-            location.reload();
+            // location.reload();
+            reloadPage()
            
         });
        
 
-   
+
 }
 
 
@@ -105,8 +106,6 @@ export function updateCartItem(productId, updateEl) {
   
 }
 
-
-
 //increment products on cart
 export function displayTotalProducts(){
     let count = 0;
@@ -115,3 +114,21 @@ export function displayTotalProducts(){
     })
     document.querySelector('.js-checkout-qty').textContent = count;
 }
+
+export function updateActiveOption(productId, optionId) {
+
+    let matchItem;
+    cart.forEach((item) =>{
+        if(productId == item.id){
+            matchItem = item;  
+            
+        }  
+    });
+
+ 
+    matchItem.deliveryOptionId = optionId
+    saveToStorage(); 
+    
+            
+}
+
