@@ -14,10 +14,10 @@ products.forEach(product =>{
 				<h2>$${formatCurrency(product.price)}</h2>
 
 				<select style='padding:.4rem .9rem'; class='select-option-${product.id}'>
-						<option value='1'>1</option>
-						<option value='2'>2</option>
-						<option value='3'>3</option>
-						<option value='4'>4</option>
+					<option value='1'>1</option>
+					<option value='2'>2</option>
+					<option value='3'>3</option>
+					<option value='4'>4</option>
 				</select>
 				<button type='button' name='button' data-product-item='${product.id}' id='cartButton'>Add to cart</button>
 

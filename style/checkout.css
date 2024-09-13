@@ -27,7 +27,7 @@ nav img{
     flex-wrap: wrap;
     justify-content: space-around;
     border: .1rem solid lightgray;
-    height: 15rem;
+    height: 12rem;
     margin-bottom: .6rem;
     padding: 0 .5rem;
     column-gap: .7rem   ;
@@ -35,9 +35,7 @@ nav img{
 /* the section hold the image and it detail */
 .checkout-products{
     display: flex;
-    column-gap: 1.5rem;
-    height: 15rem;
-    column-gap: .5rem   ;
+    height: 13rem;
 }
 .deliver-date h3{
     width: 180px;
@@ -45,9 +43,9 @@ nav img{
     font-size: .78rem;
 }
 .checkout-products img{
-  
-    height: 6rem;
+    height: 5rem;
 }
+
 .checkout-products a{
     text-decoration: none;
     margin-right: .3rem;
@@ -75,8 +73,13 @@ nav img{
 /* the part hold radio input */
 .checkout-option{
     height: 15rem;
-    line-height: 10px;
+    line-height: 7px;
     padding: .5rem;
+}
+.checkout-option p{
+    font-size: .8rem;
+    color: gray;
+    text-align: center;
 }
 
 /* the div that hold the transaton detail */

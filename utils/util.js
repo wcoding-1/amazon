@@ -8,11 +8,8 @@ export function updateCartQty(count) {
 }
 
 export function formatCurrency(currency){
-    if(currency == 'Free'){
-        return 'Free'
-    }else{
-        return currency.toFixed(2)
-    }
+
+    return (Math.round(currency)).toFixed(2);
   
  }
  

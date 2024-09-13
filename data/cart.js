@@ -1,4 +1,4 @@
-
+import {paymentDetail} from '../checkout/paymentSummery.js'
 export let cart = JSON.parse(localStorage.getItem('cart'));
 
 if(!cart){
@@ -77,6 +77,7 @@ export function removeFromCart(el, htmlE,reloadPage) {
             saveToStorage();
             // location.reload();
             reloadPage()
+            paymentDetail()
            
         });
        
