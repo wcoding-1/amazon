@@ -1,20 +1,39 @@
-import {paymentDetail} from '../checkout/paymentSummery.js'
-export let cart = JSON.parse(localStorage.getItem('cart'));
 
-if(!cart){
-    cart =  [
-        {
-            id:1,
-            qty:1,
-            deliveryOptionId: '1'
-        },
-        {
-            id:2,
-            qty:2,
-            deliveryOptionId: '2'
-        }
-    ]
+export let cart;
+
+function loadFromStorage(params) {
+    cart = JSON.parse(localStorage.getItem('cart')); 
+    if(!cart){
+        cart =  [
+            {
+                id:1,
+                qty:1,
+                deliveryOptionId: '1'
+            },
+            {
+                id:2,
+                qty:2,
+                deliveryOptionId: '2'
+            }
+        ]
+    }
 }
+
+loadFromStorage()
+// if(!cart){
+//     cart =  [
+//         {
+//             id:1,
+//             qty:1,
+//             deliveryOptionId: '1'
+//         },
+//         {
+//             id:2,
+//             qty:2,
+//             deliveryOptionId: '2'
+//         }
+//     ]
+// }
 
 
 

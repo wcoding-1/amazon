@@ -3,6 +3,7 @@ import {cart,removeFromCart
     updateCartItem,
     updateActiveOption
 } from '../data/cart.js';
+
 import {products, getProduct} from '../data/products.js';
 import dayjs from 'http://unpkg.com/dayjs@1.11.10/esm/index.js';
 import { formatCurrency } from '../utils/util.js';
